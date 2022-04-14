@@ -43,18 +43,24 @@ namespace ProjectAvancerat.NET.API.Services
         }
 
         
-        public async Task<ICollection> GetHoursworked(int id)
+        public async Task<ICollection> GetHoursworked(int week)
         {
             var result = (from tim in Context.Timereports
                           join pro in Context.Projects
                           on tim.ProjectId equals pro.ProjectId
-                          where pro.ProjectId == id
+                          join emp in Context.Employees
+                          on tim.EmployeeId equals emp.EmployeeId
+                          where tim.week == week
                           select new
                           {
                               Project = pro.ProjectName,
                               TimeWorked = tim.WorkTime,
+                              Description = tim.Description,
+                              Employee = emp.FirstName + " " + emp.LastName,
+                              Date = tim.DateOfRegistration
                               
                           }).ToListAsync();
+
 
             return await result;
         }

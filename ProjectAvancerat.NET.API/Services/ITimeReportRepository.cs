@@ -14,6 +14,6 @@ namespace ProjectAvancerat.NET.API.Services
         Task<TimeReport> DeleteTimeReport(TimeReport reportToDelete);
         Task<TimeReport> GetSingleReport(int id);
         Task<ICollection> GetAllReports();
-        Task<ICollection> GetHoursworked(int id);
+        Task<ICollection> GetHoursworked(int week);
     }
 }

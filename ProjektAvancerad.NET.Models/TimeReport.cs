@@ -10,7 +10,9 @@ namespace ProjektAvancerad.NET.Models
     {
         [Key]
         public int TimeReportId { get; set; }
-        
+
+        [Required]
+        public int week { get; set; }
         [Required]
         public int ProjectId { get; set; }
         public Project Project { get; set; }

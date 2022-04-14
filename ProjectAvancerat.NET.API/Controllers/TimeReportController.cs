@@ -84,7 +84,7 @@ namespace ProjectAvancerat.NET.API.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, "Failed to delete Report from database.");
             }
         }
-        [HttpGet("hours/{id}")]
+        [HttpGet("week/{id}")]
         public async Task<IActionResult> GetHours(int id)
         {
             return Ok(await timerepo.GetHoursworked(id));

@@ -106,7 +106,8 @@ namespace ProjectAvancerat.NET.API.Model
                 DateOfRegistration = new DateTime(2022 , 04 , 06),
                 Description = "Börjat skapa en grund för applicationen",
                 EmployeeId = 1,
-                WorkTime = 8.5m
+                WorkTime = 8.5m,
+                week = 10
             });
             modelBuilder.Entity<TimeReport>().HasData(new TimeReport
             {
@@ -115,7 +116,8 @@ namespace ProjectAvancerat.NET.API.Model
                 DateOfRegistration = new DateTime(2022 , 02 , 01),
                 Description = "Börjat med projektet i form av planering",
                 EmployeeId = 2,
-                WorkTime = 4.5m
+                WorkTime = 4.5m,
+                week = 12
             });
             modelBuilder.Entity<TimeReport>().HasData(new TimeReport
             {
@@ -124,7 +126,8 @@ namespace ProjectAvancerat.NET.API.Model
                 DateOfRegistration = new DateTime(2022 , 02 , 01),
                 Description = "Börjat med projektet i form av planering",
                 EmployeeId = 3,
-                WorkTime = 4.5m
+                WorkTime = 4.5m,
+                week = 12
             });
             modelBuilder.Entity<TimeReport>().HasData(new TimeReport
             {
@@ -133,7 +136,8 @@ namespace ProjectAvancerat.NET.API.Model
                 DateOfRegistration = new DateTime(2022 , 02 , 02),
                 Description = "Börjat skapa en grund för Spelet",
                 EmployeeId = 3,
-                WorkTime = 8.0m
+                WorkTime = 8.0m,
+                week = 13
             });
 
             modelBuilder.Entity<EmployeeProject>().HasData(new EmployeeProject
